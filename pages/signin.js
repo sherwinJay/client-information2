@@ -72,9 +72,13 @@ export default function SignIn({ providers, csrfToken }) {
             )
           })
         }
+         {/* <Link href="/register">
+          <a className="signup">Signup</a>
+        </Link> */}
         <Link href="/">
           <a className="goto-home">Go back to home page</a>
         </Link>
+       
       </div>
     </div>
   )

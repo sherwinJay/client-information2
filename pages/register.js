@@ -40,24 +40,28 @@ const Register = () => {
 	  }
 
 	return (
-		<div>
+		<div className='form-container'>
 			<h1>Register</h1>
 			<form onSubmit={handleSubmit}>
+				<label>Username</label>
 				<input type="text" name="name" 
 					value={user.name} 
 					onChange={handleChange}
 				/>
+				<label>Password</label>
 				<input type="password" name="password" 
 					value={user.password} 
 					onChange={handleChange}
 				/>
-                <input type="password" name="confirmPassword" 
+				<label>Confirm Password</label>
+        <input type="password" name="confirmPassword" 
 					value={user.confirmPassword} 
 					onChange={handleChange}
 				/>
-				  <input 
+				<input 
           type="submit" 
           placeholder="submit"
+					className='submit-btn'
         />
       </form>
 		</div>
