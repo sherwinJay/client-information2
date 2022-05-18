@@ -1,9 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end of css reset */
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #1b203d;
+  color: #fff;
+}
+
+h1,h2,h3{
+  margin-bottom: 20px;
+}
+
+h1{
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 42px;
+}
+
+h3{
+  font-size: 26px;
+  line-height: 32px;
+}
+
+h4{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+p{
+  line-height: 24px;
 }
 
 a {
@@ -13,4 +96,174 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.main-container{ 
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.red-btn,
+.blue-btn{
+  cursor: pointer;
+  padding: 7px 20px;
+  background-color: #3885d4;
+  color: #fff;
+  border-radius: 15px;
+  margin: 30px 7px 0;
+  display: inline-block;
+  max-height: 40px;
+  text-align: center;
+}
+.red-btn{
+  background-color: #ec4f71;
+}
+.top-container{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  padding: 15px 0;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.btn-test-wrapper .blue-btn,
+.top-container .blue-btn{
+  margin-top: 0;
+}
+.top-container h1{
+  margin: 0;
+}
+.btn-test-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.signin-form-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.signin-form-container label,
+.signin-form-container input{
+  display: block;
+}
+.signin-form-container label{
+  line-height: 34px;
+  text-align: left;
+}
+.signin-form-container input{
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+.google-btn,
+.signin-form-container .submit-btn{
+  text-align: center;
+  padding: 10px 8px;
+  background-color: #3885d4;
+  width: 100%;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  display: block;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.google-btn{
+  margin: 5px 0 20px;
+  background-color: #c94130;
+  border-radius: 15px;
+}
+.signin-form-container hr{
+  display: block;
+  border: 0;
+  border-top: 1px solid #aaa;
+  margin: 1.5em auto 0;
+  overflow: visible;
+  text-align: center;
+}
+.signin-form-container hr::before{
+  content: "or";
+  background: #1b203d;
+  color: #fff;
+  padding: 0 .4rem;
+  position: relative;
+  top: -13px;
+}
+
+.signin-form-container{
+  padding: 20px;
+  width: 320px;
+}
+
+.message-modal-container{
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.message-modal{
+  padding: 50px 80px;
+  background-color: #fff;
+}
+.home-action-btn,
+.action-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.home-action-btn{
+  grid-template-columns: 1fr 1fr;
+}
+
+.filter-bar-container{
+  position: relative;
+}
+
+.goto-home{
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width:1200px) {
+  .action-container{
+    grid-template-columns:  1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width:900px) {
+
+  .top-container{
+    grid-template-columns: 1fr;
+  }
+
+  .action-container,
+  .home-action-btn{
+    margin-top: 20px;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  .action-container{
+    grid-template-columns:  1fr 1fr;
+  }
+  .action-container .blue-btn{
+    display: grid;
+    grid-area: 2 / 1 / 3 / 3;
+  }
 }
