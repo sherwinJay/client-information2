@@ -5,7 +5,7 @@ import Loading from '../components/Loading';
 import Dashboard from '../components/Dashboard';
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(`${process.env.SERVER_SITE}/api/members`);
   const data = await res.json();
 
