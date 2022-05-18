@@ -18,6 +18,8 @@ export const getServerSideProps = async () => {
 
 export default function Home({ clientsData }) {
 
+  console.log(clientsData)
+
   const [ session ] = useSession();
   const [gender, setGender] = useState('all');
   const [age, setAge] = useState('all');
@@ -46,12 +48,12 @@ export default function Home({ clientsData }) {
             />
           </div>
         </div>
-        <ClientList
+        {/* <ClientList
           clientsData={clientsData}
           admin={admin}
           gender={gender}
           age={age}
-        />
+        /> */}
       </div>
     </>
   )
