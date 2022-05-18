@@ -29,13 +29,13 @@ const ClientList = ({ clientsData, handleEdit, deleteClient, toggleMessage, admi
     <>
       <div className={clientBoxWrapper}>
         {
-          clientsData.filter(client => {
+          clientsData?.filter(client => {
             if(gender === 'all'){
               return client
             }else{
               return client.gender === gender
             }
-          }).filter(client => {
+          })?.filter(client => {
             const legalAge = 18;
             switch (age) {
               case "all":
@@ -48,7 +48,7 @@ const ClientList = ({ clientsData, handleEdit, deleteClient, toggleMessage, admi
                 return client.age < legalAge
                 break;
             }
-          }).map((client) => {
+          })?.map((client) => {
             return(
               <div className={clientBox} key={client._id}>
                 <p>{client.name}</p>
