@@ -8,5 +8,5 @@ Technologies used:
 - JWT Authentication
 - MongoDB
 
-link: ([https://nextjs.org/docs](https://peoplelist.netlify.app/))
+link: https://peoplelist.netlify.app
 
