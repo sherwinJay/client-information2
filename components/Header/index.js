@@ -18,7 +18,7 @@ const Header = ({ db, toggle }) => {
 		return (
 			<li key={idx}>
 				<Link href={navItem.link}>
-					<a className={mainNavLink}>
+					<a className={`${mainNavLink} ${router.pathname == navItem.link ? 'active' : ''}`}>
 						{navItem.name}
 					</a>
 				</Link>

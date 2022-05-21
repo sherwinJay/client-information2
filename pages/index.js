@@ -36,7 +36,7 @@ export default function Home({ clientsData }) {
     <>
       <div className="main-container">
         <div className="top-container">
-          {/* <TitleSection title={"Home Page"} /> */}
+          <TitleSection title={"Poeple List"} />
           <div className="home-action-btn">
             <FilterClient 
               age={age}

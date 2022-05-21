@@ -24,7 +24,7 @@ const Register = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		addUser()	
-
+		
 	};
 
 	const addUser = async () => {

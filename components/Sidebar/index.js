@@ -20,7 +20,7 @@ const Sidebar = ({isOpen, toggle}) => {
 		return (
 			<li key={idx}>
 				<Link href={navItem.link}>
-					<a className={sideNavLinks}>
+					<a className={`${sideNavLinks} ${router.pathname == navItem.link ? 'active-mob' : ''}`}>
 						{navItem.name}
 					</a>
 				</Link>

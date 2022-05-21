@@ -33,7 +33,14 @@ export const mainNav = css`
 
 `;
 export const mainNavLink = css`
-  padding: 10px;
+  padding: 8px 15px;
+  margin: 5px;
+
+  &:hover{
+    background-color: #303557;
+    border-radius: 10px;
+  }
+
 `;
 
 export const mobileIcon = css`
